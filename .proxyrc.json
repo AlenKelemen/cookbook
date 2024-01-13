@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "https://vodovod.imagis.io/",
+        "changeOrigin": "true"
+    }
+}

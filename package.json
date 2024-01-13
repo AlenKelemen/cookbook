@@ -1,0 +1,15 @@
+{
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "@parcel/resolver-glob": "^2.11.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "latest",
+    "bootstrap": "^5.3.0"
+  }
+}
