@@ -13,6 +13,5 @@
 9. run npm i
 10. add "source": "src/index.html" to package.json so you don't need to duplicate them in each parcel command and can use npx parcel
 11. add script run parcel instead npx parcel src/index.html
-12. add --https to run in https://localhost:1234
-13. To better emulate the actual production environment when developing web apps, you can specify paths that should be proxied to another server (e.g. your real API server or a local testing server) in a .proxyrc
-14. add .parcelrc file to root, install @parcel/resolver-glob add-on to use image folder in parcel
+12. To better emulate the actual production environment when developing web apps, you can specify paths that should be proxied to another server (e.g. your real API server or a local testing server) in a .proxyrc
+13. add .parcelrc file to root, install @parcel/resolver-glob add-on to use image folder in parcel
