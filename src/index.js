@@ -1,26 +1,16 @@
 import './index.css'
-import { api } from './controls/api'
+import { Api } from './controls/api';
+import { Authorization } from './controls/auth'
 
-const header = document.createElement('h1')
-header.innerText='Hello from index.js'
+addEventListener("load", () => main())
 
-const button = document.createElement('button')
-button.innerHTML ='<i class="fas fa-camera"></i> Click me'
-button.className='btn btn-primary mb-3'
-
-const apiInf = document.createElement('textarea')
-apiInf.classList='form-control'
-apiInf.innerText = JSON.stringify(api)
-apiInf.id='api-inf'
-
-const lbl = document.createElement('label')
-lbl.innerText='Api content from api.json'
-lbl.htmlFor='api-inf'
-
-const subContaner=document.createElement('div')
-subContaner.append(lbl,apiInf)
-
-const container = document.createElement('div')
-container.className='container'
-container.append(header,button,subContaner)
-document.body.append(container)
+function main() {
+    const auth = new Authorization();
+    auth.login(keycloak => {
+        const api = new Api(keycloak)
+        document.body.innerText= 'Logged as: ' + api.getUserRole()
+        console.log(api)
+        api.getSources()
+        .then(r => console.log(r))
+    })
+}

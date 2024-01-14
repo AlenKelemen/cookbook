@@ -1,3 +1,4 @@
 {
+    "sources": "api/sources",
     "root":"api/"
 }
