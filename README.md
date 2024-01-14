@@ -1,12 +1,10 @@
-* make index.css in src
-# Add fontawesome
-* add fontawesome to dependencies in package.js
-* for fontawesome pro to run add .npmrc file to root
-* run npm i
-* import fontawesome index.css
-# Add bootstrap 5
-* add bootstrap 5 to dependencies in package.js
-* run npm i
-* import bootstrap index.css
-
-_Add ```html<link rel="stylesheet" href="./index.css">``` to use bootstrap in html_
+* Add new index.js file to src
+* import index.css
+* Add script tag to index.html
+# Import class for api
+* Add folder config to src
+* Add file api.json to config folder
+* Add folder controls to src
+* Add file api.js to controls
+* Import api.js to index.js
+* Show api.json content in index.html
