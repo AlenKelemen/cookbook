@@ -1,5 +1,5 @@
 * make index.css in src
-# Add fontawesome
+# Add FontAwesome
 * add fontawesome to dependencies in package.js
 * for fontawesome pro to run add .npmrc file to root
 * run npm i
