@@ -4,6 +4,10 @@
     "dev": "parcel",
     "build": "parcel build"
   },
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "latest",
+    "bootstrap": "^5.3.0"
+  },
   "devDependencies": {
     "parcel": "^2.11.0",
     "@parcel/resolver-glob": "^2.11.0"
