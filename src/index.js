@@ -12,5 +12,8 @@ function main() {
         console.log(api)
         api.getSources()
         .then(r => console.log(r))
+        fetch('dof/')
+        
     })
+    
 }

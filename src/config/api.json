@@ -1,4 +1,10 @@
 {
+    "controls": "api/controls",
     "sources": "api/sources",
+    "properties": "api/properties",
+    "geostyle":"api/geostyle",
+    "telemetry":"api/rpc/get_telemetry",
+    "meter":"api/rpc/get_measurement",
+    "sensorsArea":"api/rpc/set_meter_area",
     "root":"api/"
 }
