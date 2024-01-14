@@ -1,10 +1,19 @@
-* Add new index.js file to src
-* import index.css
-* Add script tag to index.html
-# Import class for api
-* Add folder config to src
-* Add file api.json to config folder
-* Add folder controls to src
-* Add file api.js to controls
-* Import api.js to index.js
-* Show api.json content in index.html
+* Add folder lang to src
+* Add file hr.json to src/lang
+# Paths to cadastre server
+* To avoid CORS paths must ba called from api server, not from parceljs server
+* Add pathRewrite to proxyrc.json:
+
+```json
+ "/dof": {
+  "target": "https://cadastre.imagis.io",
+  "changeOrigin": "true"
+}
+```
+
+* Add path names to lang/hr like: 
+
+```"rasterDOFPath": "dof/"```
+* Call path as: 
+
+```locale.rasterDOFPath```
