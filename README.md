@@ -1,19 +1,8 @@
-* Add folder lang to src
-* Add file hr.json to src/lang
-# Paths to cadastre server
-* To avoid CORS paths must ba called from api server, not from parceljs server
-* Add pathRewrite to proxyrc.json:
+# Add OpenLayers and make map with rasters
 
-```json
- "/dof": {
-  "target": "https://cadastre.imagis.io",
-  "changeOrigin": "true"
-}
-```
+* Install open layers library
+* add ol.css to index.css
+* Add map.js file to controls
+* Add imports to index.js
+* Add util.js
 
-* Add path names to lang/hr like: 
-
-```"rasterDOFPath": "dof/"```
-* Call path as: 
-
-```locale.rasterDOFPath```
