@@ -1,6 +1,19 @@
 {
     "/api": {
-        "target": "https://vodovod.imagis.io/",
-        "changeOrigin": "true"
+      "target": "https://api.imagis.io",
+      "changeOrigin": "true",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    },
+
+    "/dof": {
+      "target": "https://cadastre.imagis.io",
+      "changeOrigin": "true"
+    },
+
+    "/cpp": {
+      "target": "https://cadastre.imagis.io",
+      "changeOrigin": "true"
     }
 }
