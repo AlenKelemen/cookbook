@@ -1,5 +1,4 @@
 import api from '../config/api.json'
-export const api = api
 
 export class Api {
     constructor(keycloak) {
@@ -21,6 +20,9 @@ export class Api {
     }
     getSources() {
         return this.getData(api.sources)
+    }
+    getGeostyle() {
+        return this.getData(api.geostyle)
     }
     postData(url, body, mediaType = 'application/json') {
         const tokenUpdate = this.keycloak.updateToken()
