@@ -11,6 +11,6 @@ function main() {
     auth.login(keycloak => {
         const api = new Api(keycloak)
         const map = new MapControl(api)
-       console.log(map)
+        map.render(document.body)
     })
 }

@@ -1,5 +1,6 @@
 import Map from 'ol/Map.js'
 import View from 'ol/View.js'
+import { fromLonLat, transformExtent } from 'ol/proj'
 
 export class MapControl {
     constructor(api) {
@@ -10,15 +11,16 @@ export class MapControl {
         container.id = 'map'
         container.className = 'map vh-100 vw-100'
         const map = new Map({
-          layers: getRasters(),
           target: container,
           controls: []
         })
         map.set('api', this.api)
         element.appendChild(container)
+        console.log('title')
         this.#getView((view, title) => {
           map.setView(view)
           document.title = title
+          console.log(title)
         })
         
         map.on('change:layers', evt => {
@@ -31,7 +33,6 @@ export class MapControl {
           const view = new View({
             center: fromLonLat(properties.center),
             zoom: properties.zoom,
-            //extent: transformExtent(properties.extent, 'EPSG:4326', 'EPSG:3857'),
             maxZoom: 28,
             constrainResolution: true// animate to the closest zoom level keeping map sharp
           })
