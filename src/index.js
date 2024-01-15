@@ -1,4 +1,3 @@
-import './index.css'
 import locale from './lang/hr.json'
 
 const param = {
